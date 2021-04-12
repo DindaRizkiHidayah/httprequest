@@ -2,7 +2,7 @@
 
 OUTPUT
 
-![home](https://user-images.githubusercontent.com/70737564/114027884-0fac3500-98a2-11eb-968a-17e0c9e92054.jpeg)
+![Home1](https://user-images.githubusercontent.com/70737564/114340168-2643dc00-9b81-11eb-89ca-3142b27a9d85.jpeg)
 
 
 ![1](https://user-images.githubusercontent.com/70737564/114027899-12a72580-98a2-11eb-9932-d1b13530e156.jpeg)
