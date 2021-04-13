@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class RatingBar extends StatelessWidget {
+class Rating extends StatelessWidget {
   final int starCount;
   final double rating;
   final Color color;
 
-  RatingBar(
+  Rating(
       {this.starCount = 5, this.rating = 0.0, this.color = Colors.black87});
 
   ///create star
@@ -16,7 +16,7 @@ class RatingBar extends StatelessWidget {
     if (index >= rating) {
       icName = Icons.star_border;
       icColor = color.withOpacity(0.6);
-    } else if (index > rating - 1 && index < rating) {
+    } else if (index > rating - 5 && index < rating) {
       icName = Icons.star_half;
     }
 
