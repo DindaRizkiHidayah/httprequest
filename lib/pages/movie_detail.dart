@@ -35,11 +35,28 @@ class MovieDetail extends StatelessWidget {
                   children: <Widget>[
                     Text("Rating : " + movie.voteAverage.toString(),
                       style: TextStyle(fontSize: 17 , color: Colors.black)),
-                    RatingBar(rating : movie.voteAverage,color : Colors.yellow),
+                    Rating(rating : movie.voteAverage,color : Colors.yellow),
                   ],
                 ),
+                 Container(
+                  child: Text("Release Date : " + movie.releaseDate,
+                      style: TextStyle(fontSize: 16, color: Colors.black)),
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                  )),
+                Container(
+                  child: Text(
+                      "Language : " + movie.original_language.toString(),
+                      style: TextStyle(fontSize: 16, color: Colors.black)),
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                  )),
               Container(
-                  child: Text(movie.overview),
+                  child: Text( " Overview : \n" + movie.overview),
                   padding: EdgeInsets.only(
                     left: 16,
                     right: 16,
