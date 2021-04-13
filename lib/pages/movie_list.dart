@@ -3,7 +3,6 @@ import 'package:httprequest/pages/movie_detail.dart';
 import 'package:httprequest/services/http_services.dart';
 
 class MovieList extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   _MovieListState createState() => _MovieListState();
 }
@@ -12,6 +11,7 @@ class _MovieListState extends State<MovieList> {
   int moviesCount;
   List movies;
   HttpService service;
+  String imgPath = 'https://image.tmdb.org/t/p/w500/';
 
   Future initialize() async {
     movies = [];
@@ -32,21 +32,37 @@ class _MovieListState extends State<MovieList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Popular Movies"),
+      backgroundColor: Colors.blue[100],
+      appBar: AppBar(
+        elevation: .5,
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {},
         ),
-        body: ListView.builder(
+        title: Text("Popular Movies"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {},
+          )
+        ],
+      ),
+      body: GridView.builder(
           itemCount: (this.moviesCount == null) ? 0 : this.moviesCount,
+          padding: const EdgeInsets.all(20),gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: 2 / 3,
+            mainAxisSpacing: 20.0,
+            crossAxisSpacing: 20.0,
+          ),
           itemBuilder: (context, int position) {
-            return Card(
-              color: Colors.white,
-              elevation: 2.0,
-              child: ListTile(
-                leading: Image.network('https://www.themoviedb.org/t/p/w600_and_h900_bestv2/'+
-                movies[position].posterPath),
-                title: Text(movies[position].originalTitle),
-                subtitle:
-                    Text('Rating = ' + movies[position].voteAverage.toString()),
+            return GridTile(
+              child: InkResponse(
+                enableFeedback: true,
+                child: Image.network(
+                  imgPath + movies[position].posterPath,
+                  fit: BoxFit.cover,
+                ),
                 onTap: () {
                   MaterialPageRoute route = MaterialPageRoute(
                       builder: (_) => MovieDetail(movies[position]));
@@ -54,7 +70,7 @@ class _MovieListState extends State<MovieList> {
                 },
               ),
             );
-          },
-        ));
+          }),
+    );
   }
 }
