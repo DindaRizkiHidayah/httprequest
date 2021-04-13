@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:httprequest/models/movie.dart';
+import 'package:httprequest/pages/rating.dart';
 
 class MovieDetail extends StatelessWidget {
   final Movie movie;
@@ -30,12 +31,20 @@ class MovieDetail extends StatelessWidget {
                 height: height / 1.5,
                 child: Image.network(path),
               ),
+              Row(
+                  children: <Widget>[
+                    Text("Rating : " + movie.voteAverage.toString(),
+                      style: TextStyle(fontSize: 17 , color: Colors.black)),
+                    RatingBar(rating : movie.voteAverage,color : Colors.yellow),
+                  ],
+                ),
               Container(
                   child: Text(movie.overview),
                   padding: EdgeInsets.only(
                     left: 16,
                     right: 16,
                   )),
+                
             ],
           ),
         ),
