@@ -6,10 +6,11 @@ Kelas : MI2B
 
 OUTPUT
 
-![Home1](https://user-images.githubusercontent.com/70737564/114340168-2643dc00-9b81-11eb-89ca-3142b27a9d85.jpeg)
+![rating (1)](https://user-images.githubusercontent.com/70737564/114514858-ee629480-9c65-11eb-9bf2-d540e591e5f4.jpeg)
 
 
-![rating](https://user-images.githubusercontent.com/70737564/114487978-b72abe00-9c3a-11eb-8159-7109bb188a3a.jpeg)
+![rating (2)](https://user-images.githubusercontent.com/70737564/114514866-f0c4ee80-9c65-11eb-970f-43cb2498c0f9.jpeg)
+
 
 
 A new Flutter project.
