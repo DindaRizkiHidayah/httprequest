@@ -1,11 +1,15 @@
 # httprequest
 
+Nama : Dinda Rizki Hidayah
+NIM : 1931710092
+Kelas : MI2B
+
 OUTPUT
 
 ![Home1](https://user-images.githubusercontent.com/70737564/114340168-2643dc00-9b81-11eb-89ca-3142b27a9d85.jpeg)
 
 
-![1](https://user-images.githubusercontent.com/70737564/114027899-12a72580-98a2-11eb-9932-d1b13530e156.jpeg)
+![rating](https://user-images.githubusercontent.com/70737564/114487978-b72abe00-9c3a-11eb-8159-7109bb188a3a.jpeg)
 
 
 A new Flutter project.
