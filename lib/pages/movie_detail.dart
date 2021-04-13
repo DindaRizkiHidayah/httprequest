@@ -19,6 +19,7 @@ class MovieDetail extends StatelessWidget {
     }
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: Colors.grey[350],
       appBar: AppBar(
         title: Text(movie.originalTitle),
       ),
@@ -32,21 +33,13 @@ class MovieDetail extends StatelessWidget {
                 child: Image.network(path),
               ),
               Row(
-                  children: <Widget>[
-                    Text("Rating : " + movie.voteAverage.toString(),
-                      style: TextStyle(fontSize: 17 , color: Colors.black)),
-                    Rating(rating : movie.voteAverage,color : Colors.yellow),
-                  ],
-                ),
-                 Container(
-                  child: Text("Release Date : " + movie.releaseDate,
-                      style: TextStyle(fontSize: 16, color: Colors.black)),
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(
-                    left: 16,
-                    right: 16,
-                  )),
-                Container(
+                children: <Widget>[
+                  Text("Rating : " + movie.voteAverage.toString(),
+                      style: TextStyle(fontSize: 17, color: Colors.black)),
+                  Rating(rating: movie.voteAverage, color: Colors.yellow),
+                ],
+              ),
+              Container(
                   child: Text(
                       "Language : " + movie.original_language.toString(),
                       style: TextStyle(fontSize: 16, color: Colors.black)),
@@ -56,12 +49,21 @@ class MovieDetail extends StatelessWidget {
                     right: 16,
                   )),
               Container(
-                  child: Text( " Overview : \n" + movie.overview),
+                  child: Center(child: Text(" Overview : \n" + movie.overview)),
                   padding: EdgeInsets.only(
                     left: 16,
                     right: 16,
                   )),
-                
+              Container(
+                  child: Center(
+                    child: Text("\n Release Date : " + movie.releaseDate,
+                        style: TextStyle(fontSize: 16, color: Colors.black)),
+                  ),
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                  )),
             ],
           ),
         ),

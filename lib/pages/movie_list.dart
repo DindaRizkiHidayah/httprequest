@@ -32,20 +32,10 @@ class _MovieListState extends State<MovieList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.grey[350],
       appBar: AppBar(
         elevation: .5,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {},
-        ),
         title: Text("Popular Movies"),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          )
-        ],
       ),
       body: GridView.builder(
           itemCount: (this.moviesCount == null) ? 0 : this.moviesCount,
